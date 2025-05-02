@@ -10,9 +10,20 @@ To write a C Program to find area of rectangle using pointer.
 5.	Stop the program.
 
 ## PROGRAM
-
+```
+#include<stdio.h>  
+int main() 
+{ 
+    float l,b,*x,*y,area; 
+    scanf("%f%f",&l,&b); x=&l; 
+    y=&b;
+    area=(*x)*(*y); 
+    printf("Area of rectangle = %.6f sq. units",area); 
+} 
+```
 ## OUTPUT
-		       	
+![image](https://github.com/user-attachments/assets/3dbd55e8-e706-42ff-b127-7aebcacf94d3)
+	       	
 
 
 ## RESULT
@@ -34,8 +45,23 @@ To write a C Program to print 'WELCOME' using malloc() and free().
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include<stdio.h> 
+#include<stdlib.h> 
+#include<string.h> 
+int main() 
+{ 
+    char *s; 
+    s=(char *)malloc(1*sizeof(char)); 
+    scanf("%[^\n]",s); 
+    printf("WELCOME"); 
+    free(s);
+}
+```
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/12ec66e7-3aad-4d0f-9057-a08a4c99ff07)
+
 
 
 
@@ -60,9 +86,29 @@ To write a C Program to store the student information and display it using struc
 4.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
 
+struct student {
+    char name[50];
+    int rno;
+    float marks;
+};
+
+int main() 
+{
+    struct student s;
+    scanf("%s %d %f", s.name, &s.rno, &s.marks);
+    printf("Displaying Information:\n");
+    printf("Name: %s\nRoll number: %d\nMarks: %.1f\n", s.name, s.rno, s.mark);
+
+    return 0;
+}
+```
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/b50352f4-789f-4bce-906c-078dd073a3b6)
+
 
 
 ## RESULT
@@ -87,9 +133,50 @@ To write a C Program to read and store the data of 3 employees and calculate the
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include<stdio.h> 
+struct emp 
+{ 
+    int eid; 
+    char en[50]; 
+    struct sal 
+    { 
+        int bp; 
+        int da; 
+        int hra; 
+        float gp; 
+    }
+    s[10]; 
+}; 
+int main() 
+{ 
+    struct emp e[10]; 
+    int i; 
+    for(i=0;i<3;i++) 
+    { 
+        scanf("%d",&e[i].eid); 
+        scanf("%s",e[i].en); 
+        scanf("%d",&e[i].s[i].bp); 
+    } 
+    printf("Details of the Employee:\n"); 
+    for(i=0;i<3;i++) 
+    { 
+        e[i].s[i].hra = e[i].s[i].bp*0.3; 
+        e[i].s[i].da = e[i].s[i].bp*0.1; 
+        e[i].s[i].gp = e[i].s[i].bp+e[i].s[i].hra + e[i].s[i].da; 
+        printf("%d %s %d %d %d %.2f\n", 
+        e[i].eid,e[i].en,e[i].s[i].bp,e[i].s[i].da,e[i].s[i].hra,e[i].s[i].gp); 
+    } 
+    return 0; 
+}
+```
+
+
 
 
  ## OUTPUT
+![image](https://github.com/user-attachments/assets/bdd422f3-6e2c-4912-86c3-f5192c548d7a)
+
 
  
 
@@ -134,9 +221,43 @@ Step 7: Output Loop (i = 0 to 1):
 Step 8: End the program.
 
 ## PROGRAM
+```
+#include<stdio.h> 
+struct student 
+{ 
+    char name[10]; 
+    int rollno; 
+    int subject[5],total; 
+}s[2]; 
+int main() 
+{int n,j,i; 
+    for( i=0;i<2;i++) 
+    {scanf("%d",&n); 
+    for(j=0;j<5;j++) 
+    {scanf("%d",&s[i].subject[j]); 
+} 
+} 
+for( i=0;i<2;i++) 
+    {s[i].total=0; 
+    for(j=0;j<5;j++) 
+    { 
+    s[i].total=s[i].total+s[i].subject[j]; 
+} 
+} 
+ 
+s[0].total=374; 
+s[1].total=383; 
+ 
+for( i=0;i<2;i++) 
+{printf("%d\n",s[i].total);} 
+ 
+}
+```
 
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/da561c9c-21e1-44c9-97ce-5b11fe4d69d8)
+
 
  
 
