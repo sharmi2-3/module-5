@@ -175,7 +175,8 @@ int main()
 
 
  ## OUTPUT
-![image](https://github.com/user-attachments/assets/bdd422f3-6e2c-4912-86c3-f5192c548d7a)
+![image](https://github.com/user-attachments/assets/8effd6e0-2cff-4883-a74d-578e9b6a73d8)
+
 
 
  
